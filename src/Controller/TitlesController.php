@@ -138,7 +138,7 @@ class TitlesController extends AppController
         //Se buscan todos los titulis que sean de empleados mujeres.
         $titles = $this->Titles->find()
         ->contain('Employees')
-        ->where(['Employees.gender' => 'M']);
+        ->where(['Employees.gender' => 'F']);
         //Se manda la informacion al componente para que sepa como mostrar los datos
         $titulosMujeres = $this->paginate($titles);
         //Se manda la informacion ya paginada a la vista.

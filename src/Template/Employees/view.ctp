@@ -40,5 +40,9 @@
             <th scope="row"><?= __('Hire Date') ?></th>
             <td><?= h($employee->hire_date) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Email') ?></th>
+            <td><?= h($employee->email) ?></td>
+        </tr>
     </table>
 </div>

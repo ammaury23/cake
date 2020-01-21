@@ -21,6 +21,7 @@
                 <th scope="col"><?= $this->Paginator->sort('last_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('gender') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('hire_date') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('emails') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -33,6 +34,7 @@
                 <td><?= h($employee->last_name) ?></td>
                 <td><?= h($employee->gender) ?></td>
                 <td><?= h($employee->hire_date) ?></td>
+                <td><?= h($employee->email) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $employee->emp_no]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $employee->emp_no]) ?>

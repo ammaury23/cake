@@ -103,4 +103,21 @@ class EmployeesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function login()
+    {
+        if ($this->request->is('post')) {
+            $employee = $this->Auth->identify();
+            if ($employee) {
+            $this->Auth->setUser($employee);
+            return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Invalid username or password, try again'));
+        }
+    }
+
+    public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
+    }
 }

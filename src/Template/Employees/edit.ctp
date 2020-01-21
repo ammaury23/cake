@@ -26,6 +26,7 @@
             echo $this->Form->control('last_name');
             echo $this->Form->control('gender');
             echo $this->Form->control('hire_date');
+            echo $this->Form->control('email');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

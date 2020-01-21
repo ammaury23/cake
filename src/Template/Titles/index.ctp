@@ -9,6 +9,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Title'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Mujeres'), ['action' => 'listaMujeres']) ?></li>
     </ul>
 </nav>
 <div class="titles index large-9 medium-8 columns content">
@@ -40,6 +41,6 @@
         </tbody>
     </table>
     <?php echo $this->element('Paginador'); ?>
-    <?php echo $this->element('Mujeres'); ?>
+    
     </div>
 </div>
