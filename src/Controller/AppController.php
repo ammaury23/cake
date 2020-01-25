@@ -61,7 +61,7 @@ class AppController extends Controller
                     'action'=> 'login'
                 ],
                 'loginRedirect'=> [
-                    'controller' =>'Employees',
+                    'controller' =>'Pages',
                     'action'=>'index'
                 ], 
         ]);
@@ -72,5 +72,10 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
     }
+     public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
+    }
+    
 }
 

@@ -144,4 +144,8 @@ class TitlesController extends AppController
         //Se manda la informacion ya paginada a la vista.
         $this->set(compact('titulosMujeres'));
     }
+    public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
+    }
 }

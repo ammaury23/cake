@@ -4,7 +4,6 @@ msgstr "Titulo"
 msgid "Actions"
 msgstr "Accíones"
 
-
 msgid "To Date"
 msgstr "Hasta"
 
@@ -14,11 +13,54 @@ msgstr "Desde"
 msgid "View"
 msgstr "Ver"
 
+msgid "Salaries"
+msgstr "Salarios"
+
+msgid "New Salary"
+msgstr "Agregar Salario"
+
+msgid "Salary"
+msgstr "Salario"
+
+msgid "Birth Date"
+msgstr "Fecha de Nacimineto"
+
+msgid "Actions"
+msgstr "Accíones"
+
+
+msgid "First Name"
+msgstr "Nombre(s)"
+
+msgid "Last Name"
+msgstr "Apellido"
+
+msgid "Gender"
+msgstr "Genero"
+
+msgid "Hire Date"
+msgstr "Fecha de contratación"
+
+msgid "New Salary"
+msgstr "Agregar Salario"
+
+msgid "New Title"
+msgstr "Agregar Nuevo Puesto"..
+
 msgid "Edit"
 msgstr "Editar"
 
+msgid "Employees"
+msgstr "Empleados"
+
+msgid "Titles"
+msgstr "Puestos"
+
 msgid "Delete"
 msgstr "Borrar"
+
+msgid "New Employee"
+msgstr "Agregar empleado"
 
 msgid "The requested address %s was not found on this server."
 msgstr "La dirección solicitada %s no se encontró en el servidor."
