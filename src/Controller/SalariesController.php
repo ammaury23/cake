@@ -47,11 +47,11 @@ class SalariesController extends AppController
         if ($this->request->is('post')) {
             $salary = $this->Salaries->patchEntity($salary, $this->request->getData());
             if ($this->Salaries->save($salary)) {
-                $this->Flash->success(__('The salary has been saved.'));
+                $this->Flash->success(__('El Salario fue agregado'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The salary could not be saved. Please, try again.'));
+            $this->Flash->error(__('El salario no pudo ser agregado intenta'));
         }
         $this->set(compact('salary'));
     }
@@ -85,10 +85,10 @@ class SalariesController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function delete($id = null,$from_date=null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $salary = $this->Salaries->get($id);
+        $salary = $this->Salaries->get([$id,$from_date]);
         if ($this->Salaries->delete($salary)) {
             $this->Flash->success(__('The salary has been deleted.'));
         } else {

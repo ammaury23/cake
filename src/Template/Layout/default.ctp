@@ -28,13 +28,19 @@ $cakeDescription = 'Proyecto';
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('estilos.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<?php echo $this->element('Menu'); ?>
+<?php 
+$name = $this->getRequest()->getSession()->check('Auth.User');
+if ($name == true) {
+    echo $this->element('Menu');
+}
+?>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

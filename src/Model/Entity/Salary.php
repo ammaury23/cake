@@ -26,6 +26,6 @@ class Salary extends Entity
         'emp_no' =>true,
         'salary' => true,
         'to_date' => true,
-        'from_date' => true
+        'from_date' => true,
     ];
 }

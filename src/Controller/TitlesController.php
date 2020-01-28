@@ -116,6 +116,8 @@ class TitlesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         //Se obtiene Informacion de un registro dependiendo de su llave primaria.
         $title = $this->Titles->get([$id,$title,$from_date]);
+        debug($title);
+        exit;
         //Sepregunta si se elimino de forma correcta.
         if ($this->Titles->delete($title)) {
             //Se muestra el mensaje de que todo funciono correctamente
@@ -134,16 +136,17 @@ class TitlesController extends AppController
      * @return \Cake\Http\Response|null
      */
     public function listaMujeres() 
-    {
-        //Se buscan todos los titulis que sean de empleados mujeres.
-        $titles = $this->Titles->find()
-        ->contain('Employees')
-        ->where(['Employees.gender' => 'F']);
-        //Se manda la informacion al componente para que sepa como mostrar los datos
-        $titulosMujeres = $this->paginate($titles);
-        //Se manda la informacion ya paginada a la vista.
-        $this->set(compact('titulosMujeres'));
-    }
+        {
+            //Se buscan todos los titulis que sean de empleados mujeres.
+            $titles = $this->Titles->find()
+            ->contain('Employees')
+            ->where(['Employees.gender' => 'F']);
+            //Se manda la informacion al componente para que sepa como mostrar los datos
+            $titulosMujeres = $this->paginate($titles);
+            //Se manda la informacion ya paginada a la vista.
+            $this->set(compact('titulosMujeres'));
+        }
+        
     public function logout()
     {
         return $this->redirect($this->Auth->logout());

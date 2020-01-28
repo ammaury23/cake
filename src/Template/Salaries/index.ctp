@@ -32,7 +32,7 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $salary->emp_no,$salary->from_date->format("Y-m-d")]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $salary->emp_no,$salary->from_date->format("Y-m-d")]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $salary->emp_no,$salary->from_date->format("Y-m-d")], ['confirm' => __('Are you sure you want to delete # {0}?', $salary->emp_no)]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $salary->emp_no,$salary->from_date->format("Y-m-d")], ['confirm' => __('Seguro de eliminar # {0}?', $salary->emp_no)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

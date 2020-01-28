@@ -22,5 +22,6 @@ class Department extends Entity
      */
     protected $_accessible = [
         'dept_name' => true,
+        'dept_no'=>true
     ];
 }

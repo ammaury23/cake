@@ -104,6 +104,34 @@ class EmployeesController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+        public function listaFinanzas() 
+        {
+            $consulta = $this->Employees
+                ->find()
+                ->select(['Employees.emp_no','Employees.first_name','Employees.last_name','Salaries.salary','dept_emp.dept_no'])
+                ->join([
+                    'table'=> 'salaries',
+                    'type'=> 'INNER',
+                    'conditions' => [
+                    'Employees.emp_no = Salaries.emp_no'
+                    ]
+                ])
+            ->join([
+                'table'=> 'dept_emp',
+                'type'=> 'INNER',
+                'conditions' => [
+                    'Employees.emp_no = dept_emp.emp_no'
+                ]
+            ])
+            ->where(['salary >=' => 100000,
+                    'dept_no =' =>'d002']);
+            
+            $listaEmp = $this->paginate($consulta);
+            $this->set(compact('listaEmp'));
+
+            
+        }
+
     public function login()
     {
         if ($this->request->is('post')) {
@@ -114,6 +142,7 @@ class EmployeesController extends AppController
             }
             $this->Flash->error(__('Invalid username or password, try again'));
         }
+        
     }
 
     public function logout()

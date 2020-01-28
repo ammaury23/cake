@@ -41,6 +41,6 @@ class Employee extends Entity
         'hire_date' => true,
         'email'=> true,
         'password'=> true,
-        
+        'emp_no'=>true
     ];
 }

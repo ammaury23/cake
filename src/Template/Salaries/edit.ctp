@@ -17,11 +17,11 @@
     </ul>
 </nav>
 <div class="salaries form large-9 medium-8 columns content">
+<h3>Empleado numero: <?= h($salary->emp_no) ?></h3>
     <?= $this->Form->create($salary) ?>
     <fieldset>
         <legend><?= __('Edit Salary') ?></legend>
         <?php
-            echo $this->Form->control('Employee');
             echo $this->Form->control('salary');
             echo $this->Form->control('to_date');
         ?>

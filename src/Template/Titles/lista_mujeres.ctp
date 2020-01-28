@@ -32,7 +32,7 @@
             </tr>
             <?php endforeach; ?>
         </tbody>
-    </table>
+    </table> 
     <?php echo $this->element('Paginador'); ?>
     </div>
 </div>
